@@ -11,7 +11,7 @@ namespace App\Domain\ProjectsSteps;
 
 use Illuminate\Http\Request;
 
-class ProjectsStepsServices
+class ProjectsStepsService
 {
     private $projectsSteps;
 

@@ -1,21 +1,22 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Domain\ProjectsSteps;
 
-use App\Domain\ProjectsSteps\ProjetsStepsServices;
+use App\Domain\ProjectsSteps\ProjectsStepsService;
+use App\Domain\_Classes\AdminController;
 use Illuminate\Http\Request;
 
-class ProjetsStepsController extends Controller
+class ProjectsStepsController extends AdminController
 {
-    private $projetsStepsService;
+    private $projectsStepsService;
 
-    function __construct(ProjetsStepsServices $projetsStepsServices)
+    function __construct(ProjectsStepsService $projectsStepsService)
     {
-        $this->projetsStepsService = $projetsStepsServices;
+        $this->projectsStepsService = $projectsStepsService;
     }
 
     public function updateComplete(Request $request)
     {
-        $this->projetsStepsService->updateComplete($request);
+        $this->projectsStepsService->updateComplete($request);
     }
 }

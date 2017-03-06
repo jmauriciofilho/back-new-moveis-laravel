@@ -38,7 +38,7 @@ Route::post('/clients-store', '\App\Domain\Clients\ClientsController@store');
 Route::post('/clients-update', '\App\Domain\Clients\ClientsController@update');
 Route::post('/projects-store', '\App\Domain\Projects\ProjectsController@store');
 Route::post('/updateCompletedProject', '\App\Domain\Projects\ProjectsController@updateCompleted');
-Route::post('/updateCompleteProjectsSteps', '\App\Domain|ProjectsStepsController@updateComplete');
+Route::post('/updateCompleteProjectsSteps', '\App\Domain\ProjectsSteps\ProjectsStepsController@updateComplete');
 Route::get('/allClients', '\App\Domain\Clients\ClientsController@allClients');
 Route::post('/updateDaysSteps', '\App\Domain\Steps\StepsController@updateDays');
 Route::get('/allProjects', '\App\Domain\Projects\ProjectsController@allProjects');
@@ -51,7 +51,7 @@ Route::get('/allJustifications', '\App\Domain\Justifications\JustificationsContr
 Route::get('/allUser', '\App\Domain\Users\UsersController@allUser');
 Route::get('/allSteps', '\App\Domain\Steps\StepsController@allSteps');
 Route::post('/projects-update', '\App\Domain\Projects\ProjectsController@update');
-Route::post('/justifications-update', '\App\Domain\JustificationsController@update');
+Route::post('/justifications-update', '\App\Domain\Justifications\JustificationsController@update');
 
 
 //Auth::routes();
