@@ -28,7 +28,7 @@ return array(
     'App\\Domain\\Permissions\\PermissionsService' => $baseDir . '/app/Domain/Permissions/PermissionsService.php',
     'App\\Domain\\ProjectsSteps\\ProjectsSteps' => $baseDir . '/app/Domain/ProjectsSteps/ProjectsSteps.php',
     'App\\Domain\\ProjectsSteps\\ProjectsStepsController' => $baseDir . '/app/Domain/ProjectsSteps/ProjectsStepsController.php',
-    'App\\Domain\\ProjectsSteps\\ProjectsStepsServices' => $baseDir . '/app/Domain/ProjectsSteps/ProjectsStepsService.php',
+    'App\\Domain\\ProjectsSteps\\ProjectsStepsService' => $baseDir . '/app/Domain/ProjectsSteps/ProjectsStepsService.php',
     'App\\Domain\\Projects\\Projects' => $baseDir . '/app/Domain/Projects/Projects.php',
     'App\\Domain\\Projects\\ProjectsController' => $baseDir . '/app/Domain/Projects/ProjectsController.php',
     'App\\Domain\\Projects\\ProjectsService' => $baseDir . '/app/Domain/Projects/ProjectsService.php',

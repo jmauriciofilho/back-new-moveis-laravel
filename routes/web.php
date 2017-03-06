@@ -46,13 +46,11 @@ Route::post('/updateCurretStep', '\App\Domain\Projects\ProjectsController@update
 Route::get('/projectsSteps', '\App\Domain\Projects\ProjectsController@projectsSteps');
 Route::post('/justifications-store', '\App\Domain\Justifications\JustificationsController@store');
 Route::get('/allJustifications', '\App\Domain\Justifications\JustificationsController@allJustifications');
-
 // Servicos extras...
 Route::get('/allUser', '\App\Domain\Users\UsersController@allUser');
 Route::get('/allSteps', '\App\Domain\Steps\StepsController@allSteps');
 Route::post('/projects-update', '\App\Domain\Projects\ProjectsController@update');
 Route::post('/justifications-update', '\App\Domain\Justifications\JustificationsController@update');
-
 
 //Auth::routes();
 Route::get('/', function() {

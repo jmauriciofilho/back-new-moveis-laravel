@@ -3,9 +3,10 @@
 namespace App\Domain\Users;
 
 use App\Domain\_Classes\DefaultService;
-use App\Http\Requests\Request;
+use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class UsersService
 {
@@ -67,6 +68,7 @@ class UsersService
 
     public function loginApp(Request $request)
     {
+
         if (Auth::attempt(['email' => $request->get('email'),
             'password' => $request->get('password')], $request->has('remember'))) {
             $user = User::where('email', $request->get('email'))

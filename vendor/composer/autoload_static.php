@@ -374,7 +374,7 @@ class ComposerStaticInit8467bc634426f972e708b5e5532c65ff
         'App\\Domain\\Permissions\\PermissionsService' => __DIR__ . '/../..' . '/app/Domain/Permissions/PermissionsService.php',
         'App\\Domain\\ProjectsSteps\\ProjectsSteps' => __DIR__ . '/../..' . '/app/Domain/ProjectsSteps/ProjectsSteps.php',
         'App\\Domain\\ProjectsSteps\\ProjectsStepsController' => __DIR__ . '/../..' . '/app/Domain/ProjectsSteps/ProjectsStepsController.php',
-        'App\\Domain\\ProjectsSteps\\ProjectsStepsServices' => __DIR__ . '/../..' . '/app/Domain/ProjectsSteps/ProjectsStepsService.php',
+        'App\\Domain\\ProjectsSteps\\ProjectsStepsService' => __DIR__ . '/../..' . '/app/Domain/ProjectsSteps/ProjectsStepsService.php',
         'App\\Domain\\Projects\\Projects' => __DIR__ . '/../..' . '/app/Domain/Projects/Projects.php',
         'App\\Domain\\Projects\\ProjectsController' => __DIR__ . '/../..' . '/app/Domain/Projects/ProjectsController.php',
         'App\\Domain\\Projects\\ProjectsService' => __DIR__ . '/../..' . '/app/Domain/Projects/ProjectsService.php',
