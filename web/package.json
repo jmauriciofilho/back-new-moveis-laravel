@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "scripts": {
+    "prod": "gulp --production",
+    "dev": "gulp watch"
+  },
+  "dependencies": {
+    "bootstrap-less": "^3.3.8",
+    "cropper": "^2.3.4",
+    "datatables.net": "^1.10.12",
+    "datatables.net-bs": "^1.10.12",
+    "eonasdan-bootstrap-datetimepicker": "^4.17.42",
+    "font-awesome": "^4.6.3",
+    "icheck": "^1.0.2",
+    "ionicons": "^3.0.0",
+    "jquery": "^3.1.0",
+    "jquery-confirm": "^1.5.1",
+    "moment": "^2.14.1",
+    "pusher": "^1.5.0",
+    "select2": "^4.0.3",
+    "toastr": "^2.1.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "laravel-elixir": "^5.0.0"
+  }
+}
