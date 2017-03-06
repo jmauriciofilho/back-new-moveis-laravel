@@ -43,6 +43,7 @@
       <sourceFolder url="file://$MODULE_DIR$/vendor/nesbot/carbon/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/vendor/doctrine/common/lib" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/vendor/jakub-onderka/php-console-highlighter/src" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/barryvdh/laravel-cors" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/classpreloader/classpreloader" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/dnoegel/php-xdg-base-dir" />
@@ -132,6 +133,7 @@
     <orderEntry type="module-library">
       <library name="PHP" type="php">
         <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/barryvdh/laravel-cors" />
           <root url="file://$MODULE_DIR$/vendor/classpreloader/classpreloader" />
           <root url="file://$MODULE_DIR$/vendor/composer" />
           <root url="file://$MODULE_DIR$/vendor/dnoegel/php-xdg-base-dir" />
@@ -207,6 +209,7 @@
         </CLASSES>
         <JAVADOC />
         <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/barryvdh/laravel-cors" />
           <root url="file://$MODULE_DIR$/vendor/classpreloader/classpreloader" />
           <root url="file://$MODULE_DIR$/vendor/composer" />
           <root url="file://$MODULE_DIR$/vendor/dnoegel/php-xdg-base-dir" />
