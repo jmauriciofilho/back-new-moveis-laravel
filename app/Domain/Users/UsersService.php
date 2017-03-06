@@ -68,11 +68,13 @@ class UsersService
 
     public function loginApp(Request $request)
     {
+        $has = Auth::attempt(['email' => $request->get('email'),
+            'password' => $request->get('password')], $request->has('remember_token'));
 
-        if (Auth::attempt(['email' => $request->get('email'),
-            'password' => $request->get('password')], $request->has('remember'))) {
-            $user = User::where('email', $request->get('email'))
-                ->where('password', $request->get('password'))->first();
+        if ($has) {
+
+            $user = User::where('email', $request->get('email'))->
+            where('password', $request->get('password'))->first();
 
             $json = new Collection();
 
