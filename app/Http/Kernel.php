@@ -17,7 +17,9 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
         \Illuminate\Session\Middleware\StartSession::class, // foi adicionado para aparecer os erros retornados dos validates
         \Illuminate\View\Middleware\ShareErrorsFromSession::class, // foi adicionado para aparecer os erros retornados dos validates
+        \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class, // corrigir CORS...
         \Barryvdh\Cors\HandleCors::class, // corrigir CORS...
+
     ];
 
     /**
