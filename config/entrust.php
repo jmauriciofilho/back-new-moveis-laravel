@@ -19,7 +19,7 @@ return [
     | the role if it is in a different namespace.
     |
     */
-    'role' => \App\Domain\Roles\Role::class,
+    'role' => \App\Domain\Roles\Roles::class,
 
     /*
     |--------------------------------------------------------------------------

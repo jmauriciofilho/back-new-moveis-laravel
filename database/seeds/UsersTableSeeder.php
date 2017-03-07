@@ -11,37 +11,37 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        $roleAdmin = new \App\Domain\Roles\Role();
+        $roleAdmin = new \App\Domain\Roles\Roles();
         $roleAdmin->name         = 'administrador';
         $roleAdmin->display_name = 'Administrator';
         $roleAdmin->description  = 'Full Access';
         $roleAdmin->save();
 
-        $roleConsust = new \App\Domain\Roles\Role();
+        $roleConsust = new \App\Domain\Roles\Roles();
         $roleConsust->name         = 'consultores';
         $roleConsust->display_name = 'Consultores';
         $roleConsust->description  = 'Adiciona projetos e clientes e faz acompanhamento de passos do projeto.';
         $roleConsust->save();
 
-        $roleGerentF = new \App\Domain\Roles\Role();
+        $roleGerentF = new \App\Domain\Roles\Roles();
         $roleGerentF->name         = 'gerente_financeiro';
         $roleGerentF->display_name = 'Gerente Financeiro';
         $roleGerentF->description  = 'Faz acompanhamento de passos do projeto.';
         $roleGerentF->save();
 
-        $roleConfer = new \App\Domain\Roles\Role();
+        $roleConfer = new \App\Domain\Roles\Roles();
         $roleConfer->name         = 'conferente';
         $roleConfer->display_name = 'Conferente';
         $roleConfer->description  = 'Faz acompanhamento de passos do projeto.';
         $roleConfer->save();
 
-        $roleGerentFa = new \App\Domain\Roles\Role();
+        $roleGerentFa = new \App\Domain\Roles\Roles();
         $roleGerentFa->name         = 'gerente_de_fábrica';
         $roleGerentFa->display_name = 'Gerente de fábrica';
         $roleGerentFa->description  = 'Faz acompanhamento de passos do projeto.';
         $roleGerentFa->save();
 
-        $roleGerentP = new \App\Domain\Roles\Role();
+        $roleGerentP = new \App\Domain\Roles\Roles();
         $roleGerentP->name         = 'gerente_de_pós_venda';
         $roleGerentP->display_name = 'Gerente de Pós venda';
         $roleGerentP->description  = 'Faz acompanhamento de passos do projeto.';

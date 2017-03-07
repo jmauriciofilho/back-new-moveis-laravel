@@ -11,7 +11,7 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        $roleAdmin = new \App\Domain\Roles\Role();
+        $roleAdmin = new \App\Domain\Roles\Roles();
         $roleAdmin->name         = 'admin';
         $roleAdmin->display_name = 'Administrator';
         $roleAdmin->description  = 'Full Access';

@@ -2,7 +2,7 @@
 
 namespace App\Domain\Users;
 
-use App\Domain\Roles\Role;
+use App\Domain\Roles\Roles;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Zizaco\Entrust\Traits\EntrustUserTrait;
@@ -21,7 +21,6 @@ class User extends Authenticatable
 
     protected $hidden = [
         'password',
-        'remember_token'
     ];
 
     public function getDisplayNameRoles()
@@ -42,6 +41,6 @@ class User extends Authenticatable
 
     public function roles()
     {
-        return $this->belongsToMany(Role::class, 'role_user', 'user_id', 'role_id');
+        return $this->belongsToMany(Roles::class, 'role_user', 'user_id', 'role_id');
     }
 }

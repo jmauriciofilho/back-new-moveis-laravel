@@ -1,7 +1,7 @@
 <?php
 
 use App\Domain\_Classes\DefaultService;
-use App\Domain\Roles\Role;
+use App\Domain\Roles\Roles;
 use App\Domain\Users\User;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
@@ -13,7 +13,7 @@ class DefaultServiceTest extends TestCase
 
     public function testSetBelongsToManyOfUserServiceWithOneRole()
     {
-        $admin = Role::create([
+        $admin = Roles::create([
             'name' => 'admin',
             'display_name' => 'Administrator',
             'description' => '...'
@@ -28,13 +28,13 @@ class DefaultServiceTest extends TestCase
 
     public function testSetBelongsToManyOfUserServiceWithTwoRoles()
     {
-        $admin = Role::create([
+        $admin = Roles::create([
             'name' => 'admin',
             'display_name' => 'Administrator',
             'description' => '...'
         ]);
 
-        $manager = Role::create([
+        $manager = Roles::create([
             'name' => 'manager',
             'display_name' => 'Manager',
             'description' => '...'

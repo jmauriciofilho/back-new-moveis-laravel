@@ -3,6 +3,7 @@
 namespace App\Domain\Users;
 
 use App\Domain\_Classes\DefaultService;
+use App\Domain\Roles\RoleUser;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
@@ -14,6 +15,8 @@ class UsersService
     public static $pathEmails = 'admin.users.emails.';
 
 //    public static function __callStatic() { }
+
+
 
     public static function find($id)
     {
@@ -69,20 +72,15 @@ class UsersService
     public function loginApp(Request $request)
     {
         $has = Auth::attempt(['email' => $request->get('email'),
-            'password' => $request->get('password')], $request->has('remember_token'));
+            'password' => $request->get('password')]);
 
         if ($has) {
-
-            $user = User::where('email', $request->get('email'))->
-            where('password', $request->get('password'))->first();
-
+            $model = self::$model;
+            $user = $model::all()->where('email', '=', $request->get('email'))->first();
             $json = new Collection();
 
-            $user->remember_token = str_random(15);
-            $user->save();
-
-            $json->put('user', $user);
-            $json->put('role', $user->roles->first());
+            $json->put('user', $user->toArray());
+            $json->put('role', $user->roles->toArray());
 
             return json_encode($json->toArray());
         }
