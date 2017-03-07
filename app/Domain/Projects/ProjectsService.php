@@ -35,16 +35,16 @@ class ProjectsService
 
     public function updateCompleted(Request $request)
     {
-        $project = $this->project->find($request->get('id'));
-        $project->completed = $request->get('completed');
-        $project->save();
+        $this->project->where('id', $request->get('id'))->first();
+        $this->project->completed = $request->get('completed');
+        return $this->project->save();
     }
 
-    public function updateCurretStep(Request $request)
+    public function updateCurrentStep(Request $request)
     {
-        $project = $this->project->find($request->get('id'));
-        $project->current_step = $request->get('current_step');
-        $project->save();
+        $this->project->where('id', $request->get('id'))->first();
+        $this->project->completed = $request->get('current_step');
+        return $this->project->save();
     }
 
 }

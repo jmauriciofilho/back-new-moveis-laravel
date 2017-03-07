@@ -27,7 +27,7 @@ class ClientsService
 
     public function update(Request $request)
     {
-        return $this->client->update($request->all());
+        return $this->client->where('id', $request->get('id'))->update($request->all());
     }
 
 }

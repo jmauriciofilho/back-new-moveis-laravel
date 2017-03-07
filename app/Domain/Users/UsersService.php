@@ -16,8 +16,6 @@ class UsersService
 
 //    public static function __callStatic() { }
 
-
-
     public static function find($id)
     {
         $model = self::$model;
