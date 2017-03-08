@@ -36,7 +36,7 @@ Route::post('/login-app',  '\App\Domain\Users\UsersController@loginApp'); // ok
 // alterar usuario...
 Route::post('/clients-store', '\App\Domain\Clients\ClientsController@store'); // ok
 Route::post('/clients-update', '\App\Domain\Clients\ClientsController@update'); // ok
-Route::post('/projects-store', '\App\Domain\Projects\ProjectsController@store');
+Route::post('/projects-store', '\App\Domain\Projects\ProjectsController@store'); // ok
 Route::post('/updateCompletedProject', '\App\Domain\Projects\ProjectsController@updateCompleted');
 Route::post('/updateCompleteProjectsSteps', '\App\Domain\ProjectsSteps\ProjectsStepsController@updateComplete');
 Route::get('/allClients', '\App\Domain\Clients\ClientsController@allClients'); // ok
@@ -49,7 +49,7 @@ Route::get('/allJustifications', '\App\Domain\Justifications\JustificationsContr
 // Servicos extras...
 Route::get('/allUser', '\App\Domain\Users\UsersController@allUser'); // ok
 Route::get('/allSteps', '\App\Domain\Steps\StepsController@allSteps'); // ok
-Route::post('/projects-update', '\App\Domain\Projects\ProjectsController@update');
+Route::post('/projects-update', '\App\Domain\Projects\ProjectsController@update'); // ok
 Route::post('/justifications-update', '\App\Domain\Justifications\JustificationsController@update');
 
 //Auth::routes();

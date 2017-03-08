@@ -21,30 +21,38 @@ class ProjectsService
 
     public function store(Request $request)
     {
-        $steps = Steps::all()->toArray();
+        $steps = Steps::all();
 
-        $this->project->steps()->sync($steps);
-
-        return $this->project->create($request->all());
+        return $this->project->create($request->all())->steps()->sync($steps);
     }
 
     public function update(Request $request)
     {
-        return $this->project->update($request->all());
+        return $this->project->where('id', $request->get('id'))->update($request->all());
     }
 
     public function updateCompleted(Request $request)
     {
-        $this->project->where('id', $request->get('id'))->first();
-        $this->project->completed = $request->get('completed');
-        return $this->project->save();
+        $project = $this->project->where('id', $request->get('id'))->first();
+        $project->completed = $request->get("completed");
+
+        if ($project->save()){
+            return "Salvo com sucesso";
+        } else {
+            return "Erro ao salvar";
+        }
     }
 
     public function updateCurrentStep(Request $request)
     {
-        $this->project->where('id', $request->get('id'))->first();
-        $this->project->completed = $request->get('current_step');
-        return $this->project->save();
+        $project = $this->project->where('id', $request->get('id'))->first();
+        $project->current_step = $request->get("current_step");
+
+        if ($project->save()){
+            return "Salvo com sucesso";
+        } else {
+            return "Erro ao salvar";
+        }
     }
 
 }
