@@ -17,57 +17,57 @@ class StepsTableSeeder extends Seeder
         ]);
 
         \App\Domain\Steps\Steps::create([
-            'type' => 'Medição de Projeto',
+            'type' => \App\Domain\Steps\Steps::MEDIACAODEPROJETOS,
             'days' => 10,
         ]);
 
         \App\Domain\Steps\Steps::create([
-            'type' => 'Apresentação do Projeto',
+            'type' => \App\Domain\Steps\Steps::APRESENTACAODOPROJETO,
             'days' => 9,
         ]);
 
         \App\Domain\Steps\Steps::create([
-            'type' => 'Fechamento',
+            'type' => \App\Domain\Steps\Steps::FECHAMENTO,
             'days' => 5,
         ]);
 
         \App\Domain\Steps\Steps::create([
-            'type' => 'Financeiro',
+            'type' => \App\Domain\Steps\Steps::FINANCEIRO,
             'days' => 2,
         ]);
 
         \App\Domain\Steps\Steps::create([
-            'type' => 'Agendamento de conferência do projeto',
+            'type' => \App\Domain\Steps\Steps::AGENDAMENTODECONFERENCIADOPROJETO,
             'days' => 9,
         ]);
 
         \App\Domain\Steps\Steps::create([
-            'type' => 'Pasta Técnica',
+            'type' => \App\Domain\Steps\Steps::PASTATECNICA,
             'days' => 9,
         ]);
 
         \App\Domain\Steps\Steps::create([
-            'type' => 'Envio para a Fábrica',
+            'type' => \App\Domain\Steps\Steps::ENVIOPARAAFABRICA,
             'days' => 2,
         ]);
 
         \App\Domain\Steps\Steps::create([
-            'type' => 'Produção',
+            'type' => \App\Domain\Steps\Steps::PRODUCAO,
             'days' => 45,
         ]);
 
         \App\Domain\Steps\Steps::create([
-            'type' => 'Logística',
+            'type' => \App\Domain\Steps\Steps::LOGISTICA,
             'days' => 9,
         ]);
 
         \App\Domain\Steps\Steps::create([
-            'type' => 'Montagem',
+            'type' => \App\Domain\Steps\Steps::MONTAGEM,
             'days' => 5,
         ]);
 
         \App\Domain\Steps\Steps::create([
-            'type' => 'Pós Venda',
+            'type' => \App\Domain\Steps\Steps::POSVENDA,
             'days' => 2,
         ]);
     }
