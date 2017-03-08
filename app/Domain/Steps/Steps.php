@@ -17,7 +17,7 @@ class Steps extends Model
     const ENVIOPARAAFABRICA = 'Envio para a Fábrica';
     const PRODUCAO = 'Produção';
     const LOGISTICA = 'Logística';
-    const MONTAGEM = 'Montagem ';
+    const MONTAGEM = 'Montagem';
     const POSVENDA = 'Pós Venda';
 
     protected $fillable = [
