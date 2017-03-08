@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c23521d2-5ba2-4de5-9e8a-86d186053899" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Domain/Clients/ClientsService.php" afterPath="$PROJECT_DIR$/app/Domain/Clients/ClientsService.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Domain/Justifications/JustificationsService.php" afterPath="$PROJECT_DIR$/app/Domain/Justifications/JustificationsService.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Domain/Projects/ProjectsController.php" afterPath="$PROJECT_DIR$/app/Domain/Projects/ProjectsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Domain/Projects/ProjectsService.php" afterPath="$PROJECT_DIR$/app/Domain/Projects/ProjectsService.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Domain/ProjectsSteps/ProjectsStepsController.php" afterPath="$PROJECT_DIR$/app/Domain/ProjectsSteps/ProjectsStepsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Domain/ProjectsSteps/ProjectsStepsService.php" afterPath="$PROJECT_DIR$/app/Domain/ProjectsSteps/ProjectsStepsService.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Domain/Steps/StepsController.php" afterPath="$PROJECT_DIR$/app/Domain/Steps/StepsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Domain/Steps/StepsService.php" afterPath="$PROJECT_DIR$/app/Domain/Steps/StepsService.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Domain/Users/UsersController.php" afterPath="$PROJECT_DIR$/app/Domain/Users/UsersController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Domain/Users/UsersService.php" afterPath="$PROJECT_DIR$/app/Domain/Users/UsersService.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_12_10_144252_create_client_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_12_10_144252_create_client_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_12_10_145000_create_projects_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_12_10_145000_create_projects_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/JustificationsTableSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/JustificationsTableSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/ProjectsTableSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/ProjectsTableSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/StepsTableSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/StepsTableSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
-    </list>
+    <list default="true" id="c23521d2-5ba2-4de5-9e8a-86d186053899" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -658,12 +638,12 @@
       <workItem from="1488938025936" duration="847000" />
       <workItem from="1488939422795" duration="953000" />
       <workItem from="1488971530866" duration="63000" />
-      <workItem from="1488971797183" duration="10092000" />
+      <workItem from="1488971797183" duration="10575000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64356000" />
+    <option name="totallyTimeSpent" value="64839000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="59" y="24" width="1307" height="744" extended-state="6" />
