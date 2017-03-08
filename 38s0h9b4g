@@ -1,0 +1,5 @@
+ id |     name      |      email      |                           password                           | media_id | activated |     created_at      |     updated_at      
+----+---------------+-----------------+--------------------------------------------------------------+----------+-----------+---------------------+---------------------
+  1 | Administrator | admin@admin.com | $2y$10$7OJMgiDBGFqvEa8eNPuOzOpNU69vHX4R2sVttFx2K8BeKD.vxh4jO |          | t         | 2017-03-08 11:42:51 | 2017-03-08 11:42:51
+(1 row)
+
