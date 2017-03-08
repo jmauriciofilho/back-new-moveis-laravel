@@ -54,54 +54,54 @@ class UsersTableSeeder extends Seeder
             'activated' => true,
         ]);
 
-        $userConsult = \App\Domain\Users\User::create([
-            'name' => 'Consultores',
-            'email' => 'consult@consult.com',
-            'password' => bcrypt('consult'),
-            'activated' => true,
-        ]);
-
-        $userConsult2 = \App\Domain\Users\User::create([
-            'name' => 'Consultores2',
-            'email' => 'consult2@consultor.com',
-            'password' => bcrypt('consult2'),
-            'activated' => true,
-        ]);
-
-        $userGerentF = \App\Domain\Users\User::create([
-            'name' => 'Gerente Financeiro',
-            'email' => 'gerentf@gerent.com',
-            'password' => bcrypt('gerentf'),
-            'activated' => true,
-        ]);
-
-        $userConfer = \App\Domain\Users\User::create([
-            'name' => 'Conferente',
-            'email' => 'confer@confer.com',
-            'password' => bcrypt('confer'),
-            'activated' => true,
-        ]);
-
-        $userGerentFa = \App\Domain\Users\User::create([
-            'name' => 'Gerente de fábrica',
-            'email' => 'gerentfa@gerentfa.com',
-            'password' => bcrypt('default'),
-            'activated' => true,
-        ]);
-
-        $userGerentP = \App\Domain\Users\User::create([
-            'name' => 'Gerente de Pós venda',
-            'email' => 'gerentp@gerentp.com',
-            'password' => bcrypt('gerentp'),
-            'activated' => true,
-        ]);
+//        $userConsult = \App\Domain\Users\User::create([
+//            'name' => 'Consultores',
+//            'email' => 'consult@consult.com',
+//            'password' => bcrypt('consult'),
+//            'activated' => true,
+//        ]);
+//
+//        $userConsult2 = \App\Domain\Users\User::create([
+//            'name' => 'Consultores2',
+//            'email' => 'consult2@consultor.com',
+//            'password' => bcrypt('consult2'),
+//            'activated' => true,
+//        ]);
+//
+//        $userGerentF = \App\Domain\Users\User::create([
+//            'name' => 'Gerente Financeiro',
+//            'email' => 'gerentf@gerent.com',
+//            'password' => bcrypt('gerentf'),
+//            'activated' => true,
+//        ]);
+//
+//        $userConfer = \App\Domain\Users\User::create([
+//            'name' => 'Conferente',
+//            'email' => 'confer@confer.com',
+//            'password' => bcrypt('confer'),
+//            'activated' => true,
+//        ]);
+//
+//        $userGerentFa = \App\Domain\Users\User::create([
+//            'name' => 'Gerente de fábrica',
+//            'email' => 'gerentfa@gerentfa.com',
+//            'password' => bcrypt('default'),
+//            'activated' => true,
+//        ]);
+//
+//        $userGerentP = \App\Domain\Users\User::create([
+//            'name' => 'Gerente de Pós venda',
+//            'email' => 'gerentp@gerentp.com',
+//            'password' => bcrypt('gerentp'),
+//            'activated' => true,
+//        ]);
 
         $userAdmin->attachRole($roleAdmin);
-        $userConsult->attachRole($roleConsust);
-        $userConsult2->attachRole($roleConsust);
-        $userGerentF->attachRole($roleGerentF);
-        $userConfer->attachRole($roleConfer);
-        $userGerentFa->attachRole($roleGerentFa);
-        $userGerentP->attachRole($roleGerentP);
+//        $userConsult->attachRole($roleConsust);
+//        $userConsult2->attachRole($roleConsust);
+//        $userGerentF->attachRole($roleGerentF);
+//        $userConfer->attachRole($roleConfer);
+//        $userGerentFa->attachRole($roleGerentFa);
+//        $userGerentP->attachRole($roleGerentP);
     }
 }

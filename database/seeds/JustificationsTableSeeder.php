@@ -12,19 +12,19 @@ class JustificationsTableSeeder extends Seeder
     public function run()
     {
         $justification1 = \App\Domain\Justifications\Justifications::create([
-            'user_id' => 3,
+            'user_id' => 1,
             'step_id' => 3,
             'project_id' => 2,
-            'date' => '03/02/2017',
-            'text' => 'Atrasou pq sim!!!!',
+            'date' => '2017-02-03',
+            'text' => 'Testando aplicação.',
         ]);
 
         $justification2 = \App\Domain\Justifications\Justifications::create([
-            'user_id' => 4,
+            'user_id' => 1,
             'step_id' => 8,
             'project_id' => 1,
-            'date' => '03/02/2017',
-            'text' => 'Atrasou pq sim!!!!',
+            'date' => '2017-02-05',
+            'text' => 'Teste de justificativas.',
         ]);
 
         $justification1->save();

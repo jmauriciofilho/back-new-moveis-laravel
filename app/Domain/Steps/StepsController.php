@@ -23,6 +23,6 @@ class StepsController extends AdminController
 
     public function updateDays(Request $request)
     {
-        $this->stepsService->updateDays($request);
+        return $this->stepsService->updateDays($request);
     }
 }

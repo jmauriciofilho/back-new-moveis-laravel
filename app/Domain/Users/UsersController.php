@@ -80,5 +80,15 @@ class UsersController extends AdminController
     {
         return $this->usersService->loginApp($request);
     }
+
+    public function storeUser(Request $request)
+    {
+        return $this->usersService->storeUser($request);
+    }
+
+    public function updateUser(Request $request)
+    {
+        return $this->usersService->updateUser($request);
+    }
 }
 

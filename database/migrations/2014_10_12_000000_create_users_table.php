@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->unsignedBigInteger('media_id')->nullable();
             $table->foreign('media_id')->references('id')->on('medias')->onDelete('set null');
 
-            $table->boolean('activated')->default(false);
+            $table->boolean('activated')->default(true);
 
             $table->timestamps();
         });

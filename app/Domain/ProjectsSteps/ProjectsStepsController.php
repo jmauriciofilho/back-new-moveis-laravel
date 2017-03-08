@@ -17,6 +17,6 @@ class ProjectsStepsController extends AdminController
 
     public function updateComplete(Request $request)
     {
-        $this->projectsStepsService->updateComplete($request);
+        return $this->projectsStepsService->updateComplete($request);
     }
 }

@@ -28,7 +28,13 @@ class ProjectsService
 
     public function update(Request $request)
     {
-        return $this->project->where('id', $request->get('id'))->update($request->all());
+        $project = $this->project->where('id', $request->get('id'))->update($request->all());
+
+        if ($project){
+            return "Atualizado com sucesso.";
+        }else{
+            return "Erro na atualização.";
+        }
     }
 
     public function updateCompleted(Request $request)
@@ -36,6 +42,7 @@ class ProjectsService
         $project = $this->project->where('id', $request->get('id'))->first();
         $project->completed = $request->get("completed");
 
+        //O retorno deve ser 0 ou 1;
         if ($project->save()){
             return "Salvo com sucesso";
         } else {

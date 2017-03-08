@@ -3,6 +3,7 @@
 namespace App\Domain\Users;
 
 use App\Domain\_Classes\DefaultService;
+use App\Domain\Roles\Roles;
 use App\Domain\Roles\RoleUser;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
@@ -13,8 +14,14 @@ class UsersService
 {
     public static $model = User::class;
     public static $pathEmails = 'admin.users.emails.';
+    private $user;
 
 //    public static function __callStatic() { }
+
+    function __construct(User $user)
+    {
+        $this->user = $user;
+    }
 
     public static function find($id)
     {
@@ -85,5 +92,28 @@ class UsersService
 
         return "Usuário não encontrado!";
 
+    }
+
+    public function storeUser(Request $request)
+    {
+        $role = $request->get('role_id');
+        $user = $this->user->create($request->all());
+        if ($user){
+            $user->roles()->attach($role);
+            return "Usuário criado com sucesso.";
+        }else{
+            return "Erro ao criar usuário.";
+        }
+    }
+
+    public function updateUser(Request $request)
+    {
+        $user = $this->user->where('id', $request->get('id'))->update($request->all());
+
+        if ($user){
+            return "Atualizado com sucesso.";
+        }else{
+            return "Erro na atualização.";
+        }
     }
 }
