@@ -27,7 +27,13 @@ class ClientsService
 
     public function update(Request $request)
     {
-        return $this->client->update($request->all());
+        $client = $this->client->where('id', $request->get('id'))->update($request->all());
+
+        if ($client){
+            return "Atualizado com sucesso.";
+        }else{
+            return "Erro na atualização.";
+        }
     }
 
 }

@@ -3,7 +3,7 @@
 namespace App\Domain\Dashboard;
 
 use App\Domain\Permissions\Permission;
-use App\Domain\Roles\Role;
+use App\Domain\Roles\Roles;
 use App\Domain\Users\User;
 use App\Domain\_Classes\AdminController;
 
@@ -13,7 +13,7 @@ class DashboardController extends AdminController
     private $roles;
     private $permissions;
 
-    public function __construct(User $users, Role $roles, Permission $permissions)
+    public function __construct(User $users, Roles $roles, Permission $permissions)
     {
         parent::__construct();
         $this->users = $users;

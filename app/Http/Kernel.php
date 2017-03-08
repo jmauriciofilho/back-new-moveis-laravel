@@ -17,6 +17,9 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
         \Illuminate\Session\Middleware\StartSession::class, // foi adicionado para aparecer os erros retornados dos validates
         \Illuminate\View\Middleware\ShareErrorsFromSession::class, // foi adicionado para aparecer os erros retornados dos validates
+        \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class, // corrigir CORS...
+        \Barryvdh\Cors\HandleCors::class, // corrigir CORS...
+
     ];
 
     /**
@@ -54,5 +57,6 @@ class Kernel extends HttpKernel
         'role' => \Zizaco\Entrust\Middleware\EntrustRole::class,
         'permission' => \Zizaco\Entrust\Middleware\EntrustPermission::class,
         'ability' => \Zizaco\Entrust\Middleware\EntrustAbility::class,
+        'cors' => \App\Http\Middleware\Cors::class, // corrigindo CORS...
     ];
 }

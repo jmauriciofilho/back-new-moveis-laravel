@@ -4,16 +4,16 @@ namespace App\Domain\Users;
 
 use App\Domain\_Classes\AdminController;
 use App\Domain\Roles\RolesService;
-use App\Http\Requests\Request;
+use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Collection;
 
 class UsersController extends AdminController
 {
-    private $userService;
+    private $usersService;
 
     function __construct(UsersService $usersService)
     {
-        $this->userService = $usersService;
+        $this->usersService = $usersService;
     }
 
     public function index()
@@ -78,7 +78,17 @@ class UsersController extends AdminController
 
     public function loginApp(Request $request)
     {
-        return $this->userService->loginApp($request);
+        return $this->usersService->loginApp($request);
+    }
+
+    public function storeUser(Request $request)
+    {
+        return $this->usersService->storeUser($request);
+    }
+
+    public function updateUser(Request $request)
+    {
+        return $this->usersService->updateUser($request);
     }
 }
 

@@ -26,14 +26,14 @@ class ProjectsController extends AdminController
         return $this->projectsService->update($request);
     }
 
-    public function updateCurretStep(Request $request)
+    public function updateCurrentStep(Request $request)
     {
-        $this->projectsService->updateCurretStep($request);
+        return $this->projectsService->updateCurrentStep($request);
     }
 
     public function updateCompleted(Request $request)
     {
-        $this->projectsService->updateCompleted($request);
+        return $this->projectsService->updateCompleted($request);
     }
 
     public function allProjects()

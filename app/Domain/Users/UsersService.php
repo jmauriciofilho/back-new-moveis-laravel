@@ -3,16 +3,25 @@
 namespace App\Domain\Users;
 
 use App\Domain\_Classes\DefaultService;
-use App\Http\Requests\Request;
+use App\Domain\Roles\Roles;
+use App\Domain\Roles\RoleUser;
+use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class UsersService
 {
     public static $model = User::class;
     public static $pathEmails = 'admin.users.emails.';
+    private $user;
 
 //    public static function __callStatic() { }
+
+    function __construct(User $user)
+    {
+        $this->user = $user;
+    }
 
     public static function find($id)
     {
@@ -67,23 +76,44 @@ class UsersService
 
     public function loginApp(Request $request)
     {
-        if (Auth::attempt(['email' => $request->get('email'),
-            'password' => $request->get('password')], $request->has('remember'))) {
-            $user = User::where('email', $request->get('email'))
-                ->where('password', $request->get('password'))->first();
+        $has = Auth::attempt(['email' => $request->get('email'),
+            'password' => $request->get('password')]);
 
+        if ($has) {
+            $model = self::$model;
+            $user = $model::all()->where('email', '=', $request->get('email'))->first();
             $json = new Collection();
 
-            $user->remember_token = str_random(15);
-            $user->save();
-
-            $json->put('user', $user);
-            $json->put('role', $user->roles->first());
+            $json->put('user', $user->toArray());
+            $json->put('role', $user->roles->toArray());
 
             return json_encode($json->toArray());
         }
 
         return "Usuário não encontrado!";
 
+    }
+
+    public function storeUser(Request $request)
+    {
+        $role = $request->get('role_id');
+        $user = $this->user->create($request->all());
+        if ($user){
+            $user->roles()->attach($role);
+            return "Usuário criado com sucesso.";
+        }else{
+            return "Erro ao criar usuário.";
+        }
+    }
+
+    public function updateUser(Request $request)
+    {
+        $user = $this->user->where('id', $request->get('id'))->update($request->all());
+
+        if ($user){
+            return "Atualizado com sucesso.";
+        }else{
+            return "Erro na atualização.";
+        }
     }
 }

@@ -11,7 +11,7 @@ namespace App\Domain\ProjectsSteps;
 
 use Illuminate\Http\Request;
 
-class ProjectsStepsServices
+class ProjectsStepsService
 {
     private $projectsSteps;
 
@@ -22,9 +22,15 @@ class ProjectsStepsServices
 
     public function updateComplete(Request $request)
     {
-        $projectsSteps = $this->projectsSteps->find($request->get('id'));
-        $projectsSteps->complete = $request->get('complete');
-        $projectsSteps->save();
+        $projectSteps = $this->projectsSteps->where('id', $request->get('id'))->first();
+        $projectSteps->complete = $request->get("complete");
+
+        //O retorno deve ser 0 ou 1;
+        if ($projectSteps->save()){
+            return "Salvo com sucesso";
+        } else {
+            return "Erro ao salvar";
+        }
     }
 
 }

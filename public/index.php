@@ -1,5 +1,7 @@
 <?php
 
+header("Access-Control-Allow-Origin: *"); // erro CORS..
+
 /**
  * Laravel - A PHP Framework For Web Artisans
  *

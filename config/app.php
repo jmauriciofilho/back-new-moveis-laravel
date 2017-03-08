@@ -171,6 +171,10 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
         Vinkla\Pusher\PusherServiceProvider::class,
+        /**
+         * by Mauricio - corrigir CORS
+         */
+        Barryvdh\Cors\ServiceProvider::class,
 
     ],
 

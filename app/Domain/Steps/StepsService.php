@@ -22,9 +22,14 @@ class StepsService
 
     public function updateDays(Request $request)
     {
-        $steps = $this->steps->find($request->get('id'));
-        $steps->days = $request->get('days');
-        $steps->save();
+        $steps = $this->steps->where('id', $request->get('id'))->first();
+        $steps->days = $request->get("days");
+
+        if ($steps->save()){
+            return "Salvo com sucesso";
+        } else {
+            return "Erro ao salvar";
+        }
     }
 
 }

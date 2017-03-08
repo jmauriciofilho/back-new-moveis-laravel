@@ -16,7 +16,7 @@ class RolesController extends AdminController
 
     public function create()
     {
-        $role = new Role();
+        $role = new Roles();
 
         $permissions = RolesService::getAllPluck();
 

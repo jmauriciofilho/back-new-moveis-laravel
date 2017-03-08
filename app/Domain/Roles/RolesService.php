@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 
 class RolesService
 {
-    public static $model = Role::class;
+    public static $model = Roles::class;
 
     public static function find($id)
     {

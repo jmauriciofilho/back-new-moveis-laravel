@@ -1,5 +1,8 @@
 <?php
 
+header('Access-Control-Allow-Origin: *');
+header( 'Access-Control-Allow-Headers: Authorization, Content-Type' );
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,30 +29,36 @@ Route::post('password/email', '\App\Domain\Auth\ForgotPasswordController@sendRes
 Route::get('password/reset', '\App\Domain\Auth\ResetPasswordController@showResetForm');
 Route::post('password/reset', '\App\Domain\Auth\ResetPasswordController@reset');
 
-// Route admin api...
-// Principais servicos...
-Route::post('/login-app',  '\App\Domain\Users\UsersController@loginApp');
-// criar usuario...
-// alterar usuario...
-Route::post('/clients-store', '\App\Domain\Clients\ClientsController@store');
-Route::post('/clients-update', '\App\Domain\Clients\ClientsController@update');
-Route::post('/projects-store', '\App\Domain\Projects\ProjectsController@store');
-Route::post('/updateCompletedProject', '\App\Domain\Projects\ProjectsController@updateCompleted');
-Route::post('/updateCompleteProjectsSteps', '\App\Domain|ProjectsStepsController@updateComplete');
-Route::get('/allClients', '\App\Domain\Clients\ClientsController@allClients');
-Route::post('/updateDaysSteps', '\App\Domain\Steps\StepsController@updateDays');
-Route::get('/allProjects', '\App\Domain\Projects\ProjectsController@allProjects');
-Route::post('/updateCurretStep', '\App\Domain\Projects\ProjectsController@updateCurretStep');
-Route::get('/projectsSteps', '\App\Domain\Projects\ProjectsController@projectsSteps');
-Route::post('/justifications-store', '\App\Domain\Justifications\JustificationsController@store');
-Route::get('/allJustifications', '\App\Domain\Justifications\JustificationsController@allJustifications');
+/*
+ * Route admin api...
+ */
+/*
+  * Principais servicos...
+  */
+Route::post('/login-app',  '\App\Domain\Users\UsersController@loginApp'); // ok
+Route::post('/userStore', '\App\Domain\Users\UsersController@storeUser'); // criar usuario... // falta encriptar senha
+Route::post('/updateUser', '\App\Domain\Users\UsersController@updateUser'); // alterar usuario... // ok
+// alterar senha ...
+Route::post('/clients-store', '\App\Domain\Clients\ClientsController@store'); // ok
+Route::post('/clients-update', '\App\Domain\Clients\ClientsController@update'); // ok
+Route::post('/projects-store', '\App\Domain\Projects\ProjectsController@store'); // ok
+Route::post('/updateCompletedProject', '\App\Domain\Projects\ProjectsController@updateCompleted'); // ok
+Route::post('/updateCompleteProjectsSteps', '\App\Domain\ProjectsSteps\ProjectsStepsController@updateComplete'); // ok
+Route::get('/allClients', '\App\Domain\Clients\ClientsController@allClients'); // ok
+Route::get('/allProjects', '\App\Domain\Projects\ProjectsController@allProjects'); // ok
+Route::post('/updateCurrentStep', '\App\Domain\Projects\ProjectsController@updateCurrentStep'); // ok
+Route::get('/projectsSteps', '\App\Domain\Projects\ProjectsController@projectsSteps'); // ok
+Route::post('/justifications-store', '\App\Domain\Justifications\JustificationsController@store'); // ok
+Route::get('/allJustifications', '\App\Domain\Justifications\JustificationsController@allJustifications'); // ok
 
-// Servicos extras...
-Route::get('/allUser', '\App\Domain\Users\UsersController@allUser');
-Route::get('/allSteps', '\App\Domain\Steps\StepsController@allSteps');
-Route::post('/projects-update', '\App\Domain\Projects\ProjectsController@update');
-Route::post('/justifications-update', '\App\Domain\JustificationsController@update');
-
+/*
+  * Servicos extras...
+  */
+Route::get('/allUser', '\App\Domain\Users\UsersController@allUser'); // ok
+Route::get('/allSteps', '\App\Domain\Steps\StepsController@allSteps'); // ok
+Route::post('/projects-update', '\App\Domain\Projects\ProjectsController@update'); // ok
+Route::post('/justifications-update', '\App\Domain\Justifications\JustificationsController@update'); // ok
+// Route::post('/updateDaysSteps', '\App\Domain\Steps\StepsController@updateDays'); // ok
 
 //Auth::routes();
 Route::get('/', function() {

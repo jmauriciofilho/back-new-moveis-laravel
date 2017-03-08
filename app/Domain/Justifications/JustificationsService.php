@@ -26,6 +26,13 @@ class JustificationsService
 
     public function update(Request $request)
     {
-        return $this->justifications->update($request->all());
+        $justifications = $this->justifications->where('id', $request->get('id'))->update($request->all());
+       
+        if ($justifications){
+            return "Atualizado com sucesso.";
+        }else{
+            return "Erro na atualização.";
+        }
+
     }
 }

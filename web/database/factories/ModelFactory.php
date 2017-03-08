@@ -21,7 +21,7 @@ $factory->define(\App\Domain\Users\User::class, function (Faker\Generator $faker
     ];
 });
 
-$factory->define(\App\Domain\Roles\Role::class, function (Faker\Generator $faker) {
+$factory->define(\App\Domain\Roles\Roles::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->unique()->firstNameFemale,
         'display_name' => $faker->name,
