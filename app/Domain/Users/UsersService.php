@@ -96,14 +96,16 @@ class UsersService
 
     public function storeUser(Request $request)
     {
-        $role = $request->get('role_id');
-        $user = $this->user->create($request->all());
-        if ($user){
+        DB::transaction(function() use ($request)
+        {
+            $role = $request->get('role_id');
+            $request->merge(['password' => bcrypt($request->get("password"))]);
+            $user = $this->user->create($request->all());
             $user->roles()->attach($role);
-            return "Usuário criado com sucesso.";
-        }else{
-            return "Erro ao criar usuário.";
-        }
+
+        });
+
+        return "Usuário criado com sucesso.";
     }
 
     public function updateUser(Request $request)

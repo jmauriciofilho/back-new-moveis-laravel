@@ -17,10 +17,12 @@ class CreateProjectsStepsTable extends Migration
             $table->increments('id');
 
             $table->integer('project_id')->unsigned();
-            $table->foreign('project_id')->references('id')->on('projects');
+            $table->foreign('project_id')->references('id')->on('projects')
+                ->onUpdate('cascade')->onDelete('cascade');
 
             $table->integer('step_id')->unsigned();
-            $table->foreign('step_id')->references('id')->on('steps');
+            $table->foreign('step_id')->references('id')->on('steps')
+                ->onUpdate('cascade')->onDelete('cascade');
 
             $table->boolean('complete')->default(false);
 

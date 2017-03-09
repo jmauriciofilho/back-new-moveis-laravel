@@ -2,6 +2,7 @@
     <div class="pull-left image">
         <img src="/assets/site/img/no-photo.gif" class="img-circle" alt="User Image">
     </div>
+    <?php $auth = \Illuminate\Support\Facades\Auth::user()?>
     <div class="pull-left info">
         <p>{!! $auth->name !!}</p>
         <a href="javascript:void(0);">
