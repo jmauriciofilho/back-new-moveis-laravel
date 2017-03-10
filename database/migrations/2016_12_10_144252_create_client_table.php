@@ -19,7 +19,7 @@ class CreateClientTable extends Migration
             $table->enum('gender', ['Masculino', 'Feminino']);
             $table->char('cpf', 11)->unique();
             $table->string('email')->unique();
-            $table->integer('phone', 11);
+            $table->char('phone', 11);
 
             $table->timestamps();
         });

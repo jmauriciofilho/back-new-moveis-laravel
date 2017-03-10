@@ -17,13 +17,13 @@ class CreateJustificationsTable extends Migration
             $table->increments('id');
 
             $table->unsignedInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 
             $table->unsignedInteger('step_id');
-            $table->foreign('step_id')->references('id')->on('steps');
+            $table->foreign('step_id')->references('id')->on('steps')->onDelete('cascade');
 
             $table->unsignedInteger('project_id');
-            $table->foreign('project_id')->references('id')->on('projects');
+            $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade');
 
             $table->date('date');
             $table->text('text');

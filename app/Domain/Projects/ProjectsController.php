@@ -5,7 +5,6 @@ namespace App\Domain\Projects;
 use App\Domain\_Classes\AdminController;
 use App\Domain\Steps\Steps;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class ProjectsController extends AdminController
 {
@@ -36,18 +35,24 @@ class ProjectsController extends AdminController
         return $this->projectsService->updateCompleted($request);
     }
 
+    public function delete(Request $request)
+    {
+        return $this->projectsService->delete($request);
+    }
+
+    public function toSeekProject(Request $request)
+    {
+        return $this->projectsService->toSeekProject($request);
+    }
+
     public function allProjects()
     {
-        $projects = Projects::all();
-
-        return json_encode($projects);
+        return $this->projectsService->allProjects();
     }
 
     public function projectsSteps()
     {
-        $projectsSteps = DB::table('projects_steps')->get();
-
-        return json_encode($projectsSteps);
+        return $this->projectsService->projectsSteps();
     }
 
 }

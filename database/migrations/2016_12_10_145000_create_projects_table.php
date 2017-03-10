@@ -24,7 +24,7 @@ class CreateProjectsTable extends Migration
                 'Montagem', 'Pós Venda'])->default("Atendimento");
 
             $table->integer('client_id')->unsigned();
-            $table->foreign('client_id')->references('id')->on('clients');
+            $table->foreign('client_id')->references('id')->on('clients')->onDelete('cascade');
 
             $table->timestamps();
         });

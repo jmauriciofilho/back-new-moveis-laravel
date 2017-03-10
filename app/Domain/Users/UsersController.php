@@ -71,9 +71,7 @@ class UsersController extends AdminController
 
     public function allUser()
     {
-        $users = User::all();
-
-        return json_encode($users);
+        return $this->usersService->allUser();
     }
 
     public function loginApp(Request $request)
@@ -89,6 +87,21 @@ class UsersController extends AdminController
     public function updateUser(Request $request)
     {
         return $this->usersService->updateUser($request);
+    }
+
+    public function changePassword(Request $request)
+    {
+        return $this->usersService->changePassword($request);
+    }
+
+    public function deleteUser(Request $request)
+    {
+        return $this->usersService->deleteUser($request);
+    }
+
+    public function toSeekUser(Request $request)
+    {
+        return $this->usersService->toSeekUser($request);
     }
 }
 

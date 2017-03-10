@@ -59,4 +59,11 @@ class RolesController extends AdminController
             return redirect()->back();
         }
     }
+
+    public function allRoles()
+    {
+        $roles = Roles::all();
+
+        return json_encode($roles);
+    }
 }

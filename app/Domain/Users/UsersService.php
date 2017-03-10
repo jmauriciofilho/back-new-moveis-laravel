@@ -118,4 +118,42 @@ class UsersService
             return "Erro na atualização.";
         }
     }
+
+    public function changePassword(Request $request)
+    {
+        $user = $this->user->where('id', $request->get('id'))->first();
+        $request->merge(['password' => bcrypt($request->get("password"))]);
+        $user->password = $request->get('password');
+        if ($user->save()){
+            return "Senha alterada com sucesso.";
+        }else{
+            return "Erro na alteração da senha.";
+        }
+
+    }
+
+    public function deleteUser(Request $request)
+    {
+        $detete = $this->user->where('id', $request->get('id'))->delete();
+        if ($detete){
+            return "Cliente apagado com sucesso.";
+        }else{
+            return "Erros ao apagar cliente.";
+        }
+    }
+
+    public function toSeekUser(Request $request)
+    {
+        $user = $this->user->where('id', $request->get('id'))->first();
+        $json = new Collection();
+        $json->put('client', $user->toArray());
+        return json_encode($json->toArray());
+    }
+
+    public function allUser()
+    {
+        $users = User::all();
+
+        return json_encode($users);
+    }
 }

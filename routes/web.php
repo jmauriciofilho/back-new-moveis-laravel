@@ -36,28 +36,36 @@ Route::post('password/reset', '\App\Domain\Auth\ResetPasswordController@reset');
   * Principais serviços...
   */
 Route::post('/login-app',  '\App\Domain\Users\UsersController@loginApp'); // ok
-Route::post('/userStore', '\App\Domain\Users\UsersController@storeUser'); // criar usuario... // falta encriptar senha
-Route::post('/updateUser', '\App\Domain\Users\UsersController@updateUser'); // alterar usuario... // ok
-// alterar senha ...
+Route::get('/allRoles', '\App\Domain\Roles\RolesController@allRoles'); // ok
+Route::post('/userStore', '\App\Domain\Users\UsersController@storeUser'); // ok
+Route::get('/allUser', '\App\Domain\Users\UsersController@allUser'); // ok
+Route::post('/updateUser', '\App\Domain\Users\UsersController@updateUser'); // ok
+Route::post('/deleteUser', '\App\Domain\Users\UsersController@deleteUser'); // ok
+Route::post('/to-seek-user', '\App\Domain\Users\UsersController@toSeekUser'); // ok
+Route::post('/change-password', '\App\Domain\Users\UsersController@changePassword'); // ok
+Route::get('/allClients', '\App\Domain\Clients\ClientsController@allClients'); // ok
 Route::post('/clients-store', '\App\Domain\Clients\ClientsController@store'); // ok
 Route::post('/clients-update', '\App\Domain\Clients\ClientsController@update'); // ok
+Route::post('/clients-delete', '\App\Domain\Clients\ClientsController@delete'); // ok
+Route::post('/to-seek-client', '\App\Domain\Clients\ClientsController@toSeekClient'); // ok
+Route::get('/allProjects', '\App\Domain\Projects\ProjectsController@allProjects'); // ok
 Route::post('/projects-store', '\App\Domain\Projects\ProjectsController@store'); // ok
+Route::post('/projects-update', '\App\Domain\Projects\ProjectsController@update'); // ok
+Route::post('/projects-delete', '\App\Domain\Projects\ProjectsController@delete'); // ok
+Route::post('/to-seek-project', '\App\Domain\Projects\ProjectsController@toSeekProject'); // ok
 Route::post('/updateCompletedProject', '\App\Domain\Projects\ProjectsController@updateCompleted'); // ok
 Route::post('/updateCompleteProjectsSteps', '\App\Domain\ProjectsSteps\ProjectsStepsController@updateComplete'); // ok
-Route::get('/allClients', '\App\Domain\Clients\ClientsController@allClients'); // ok
-Route::get('/allProjects', '\App\Domain\Projects\ProjectsController@allProjects'); // ok
 Route::post('/updateCurrentStep', '\App\Domain\Projects\ProjectsController@updateCurrentStep'); // ok
 Route::get('/projectsSteps', '\App\Domain\Projects\ProjectsController@projectsSteps'); // ok
 Route::post('/justifications-store', '\App\Domain\Justifications\JustificationsController@store'); // ok
 Route::get('/allJustifications', '\App\Domain\Justifications\JustificationsController@allJustifications'); // ok
+Route::post('/justifications-update', '\App\Domain\Justifications\JustificationsController@update'); // ok
+Route::post('/to-seek-justifications', '\App\Domain\Justifications\JustificationsController@toSeekJustification'); // ok
+Route::get('/allSteps', '\App\Domain\Steps\StepsController@allSteps'); // ok
 
 /*
   * Servicos extras...
   */
-Route::get('/allUser', '\App\Domain\Users\UsersController@allUser'); // ok
-Route::get('/allSteps', '\App\Domain\Steps\StepsController@allSteps'); // ok
-Route::post('/projects-update', '\App\Domain\Projects\ProjectsController@update'); // ok
-Route::post('/justifications-update', '\App\Domain\Justifications\JustificationsController@update'); // ok
 // Route::post('/updateDaysSteps', '\App\Domain\Steps\StepsController@updateDays'); // ok
 
 //Auth::routes();

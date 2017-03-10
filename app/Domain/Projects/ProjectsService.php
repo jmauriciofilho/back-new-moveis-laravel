@@ -10,6 +10,9 @@ namespace App\Domain\Projects;
 
 use App\Domain\Steps\Steps;
 use Illuminate\Http\Request;
+use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\DB;
+
 class ProjectsService
 {
     private $project;
@@ -37,6 +40,31 @@ class ProjectsService
         }
     }
 
+    public function delete(Request $request)
+    {
+        $delete = $this->project->where('id', $request->get('id'))->delete();
+        if ($delete){
+            return "Projeto apagando com sucesso.";
+        }else{
+            return "Erro ao apagar projeto";
+        }
+    }
+
+    public function toSeekProject(Request $request)
+    {
+        $project = $this->project->where('id', $request->get('id'))->first();
+        $json = new Collection();
+        $json->put('project', $project->toArray());
+        return json_encode($json->toArray());
+    }
+
+    public function allProjects()
+    {
+        $projects = Projects::all();
+
+        return json_encode($projects);
+    }
+
     public function updateCompleted(Request $request)
     {
         $project = $this->project->where('id', $request->get('id'))->first();
@@ -60,6 +88,13 @@ class ProjectsService
         } else {
             return "Erro ao salvar";
         }
+    }
+
+    public function projectsSteps()
+    {
+        $projectsSteps = DB::table('projects_steps')->get();
+
+        return json_encode($projectsSteps);
     }
 
 }

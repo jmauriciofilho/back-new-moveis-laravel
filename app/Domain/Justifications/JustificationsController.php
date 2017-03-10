@@ -26,8 +26,11 @@ class JustificationsController extends AdminController
 
     public function allJustifications()
     {
-        $justifications = Justifications::all();
+        return $this->justificationsService->allJustifications();
+    }
 
-        return json_encode($justifications);
+    public function toSeekJustification(Request $request)
+    {
+        return $this->justificationsService->toSeekJustification($request);
     }
 }
