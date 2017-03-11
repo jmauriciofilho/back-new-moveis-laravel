@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c23521d2-5ba2-4de5-9e8a-86d186053899" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/ClientsTableSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/ClientsTableSeeder.php" />
-    </list>
+    <list default="true" id="c23521d2-5ba2-4de5-9e8a-86d186053899" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,7 +21,7 @@
       <file leaf-file-name="ClientsTableSeeder.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/database/seeds/ClientsTableSeeder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
+            <state relative-caret-position="346">
               <caret line="23" column="40" lean-forward="true" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
               <folding />
             </state>
@@ -669,12 +667,12 @@
       <workItem from="1489062300825" duration="2126000" />
       <workItem from="1489079206204" duration="68000" />
       <workItem from="1489144320274" duration="11715000" />
-      <workItem from="1489192115210" duration="730000" />
+      <workItem from="1489192115210" duration="996000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86914000" />
+    <option name="totallyTimeSpent" value="87180000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="59" y="24" width="1307" height="744" extended-state="6" />
@@ -1088,7 +1086,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database/seeds/ClientsTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
+        <state relative-caret-position="346">
           <caret line="23" column="40" lean-forward="true" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
           <folding />
         </state>
