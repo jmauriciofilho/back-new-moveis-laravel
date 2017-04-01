@@ -12,7 +12,7 @@ class Steps extends Model
     const APRESENTACAODOPROJETO = 'Apresentação do Projeto';
     const FECHAMENTO = 'Fechamento';
     const FINANCEIRO = 'Financeiro';
-    const AGENDAMENTODECONFERENCIADOPROJETO = 'Agendamento de Conferência do projeto';
+    const AGENDAMENTODECONFERENCIADOPROJETO = 'Agendamento de Conferência do Projeto';
     const PASTATECNICA = 'Pasta Técnica';
     const ENVIOPARAAFABRICA = 'Envio Para a Fábrica';
     const PRODUCAO = 'Produção';
