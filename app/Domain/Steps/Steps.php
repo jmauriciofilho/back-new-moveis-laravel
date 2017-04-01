@@ -8,17 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class Steps extends Model
 {
     const ATENDIMENTO = 'Atendimento';
-    const MEDIACAODEPROJETOS = 'Medição de Projeto';
+    const MEDIACAODEPROJETOS = 'Mediação de Projeto';
     const APRESENTACAODOPROJETO = 'Apresentação do Projeto';
     const FECHAMENTO = 'Fechamento';
     const FINANCEIRO = 'Financeiro';
-    const AGENDAMENTODECONFERENCIADOPROJETO = 'Agendamento de conferência do projeto';
+    const AGENDAMENTODECONFERENCIADOPROJETO = 'Agendamento de Conferência do projeto';
     const PASTATECNICA = 'Pasta Técnica';
-    const ENVIOPARAAFABRICA = 'Envio para a Fábrica';
+    const ENVIOPARAAFABRICA = 'Envio Para a Fábrica';
     const PRODUCAO = 'Produção';
     const LOGISTICA = 'Logística';
     const MONTAGEM = 'Montagem';
-    const POSVENDA = 'Pós Venda';
+    const POSVENDA = 'Pós-Venda';
 
     protected $fillable = [
         'type',

@@ -22,7 +22,7 @@ class ProjectsTableSeeder extends Seeder
         $project1->save();
 
         $project2 = \App\Domain\Projects\Projects::create([
-            'description' => 'Reforma sofa',
+            'description' => 'Reforma de sofá',
             'start_project' => '2017-02-05',
             'completed' => false,
             'client_id' => 2,
@@ -31,7 +31,7 @@ class ProjectsTableSeeder extends Seeder
         $project2->save();
 
         $project3 = \App\Domain\Projects\Projects::create([
-            'description' => 'Fazer Quarto de casal',
+            'description' => 'Fazer quarto de casal',
             'start_project' => '2017-01-02',
             'completed' => false,
             'client_id' => 3,
@@ -40,7 +40,7 @@ class ProjectsTableSeeder extends Seeder
         $project3->save();
 
         $project4 = \App\Domain\Projects\Projects::create([
-            'description' => 'Quardaroupa',
+            'description' => 'Guarda-roupa',
             'start_project' => '2017-01-12',
             'completed' => false,
             'client_id' => 1,

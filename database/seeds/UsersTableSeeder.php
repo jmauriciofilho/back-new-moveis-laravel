@@ -37,13 +37,13 @@ class UsersTableSeeder extends Seeder
 
         $roleGerentFa = new \App\Domain\Roles\Roles();
         $roleGerentFa->name         = 'gerente_de_fábrica';
-        $roleGerentFa->display_name = 'Gerente de fábrica';
+        $roleGerentFa->display_name = 'Gerente de Fábrica';
         $roleGerentFa->description  = 'Faz acompanhamento de passos do projeto.';
         $roleGerentFa->save();
 
         $roleGerentP = new \App\Domain\Roles\Roles();
         $roleGerentP->name         = 'gerente_de_pós_venda';
-        $roleGerentP->display_name = 'Gerente de Pós venda';
+        $roleGerentP->display_name = 'Gerente de Pós-Venda';
         $roleGerentP->description  = 'Faz acompanhamento de passos do projeto.';
         $roleGerentP->save();
 
