@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Steps extends Model
 {
     const ATENDIMENTO = 'Atendimento';
-    const MEDIACAODEPROJETOS = 'Mediação de Projeto';
+    const MEDIACAODEPROJETOS = 'Mediação de Projetos';
     const APRESENTACAODOPROJETO = 'Apresentação do Projeto';
     const FECHAMENTO = 'Fechamento';
     const FINANCEIRO = 'Financeiro';

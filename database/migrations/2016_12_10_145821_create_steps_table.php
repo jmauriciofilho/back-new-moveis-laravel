@@ -15,7 +15,7 @@ class CreateStepsTable extends Migration
     {
         Schema::create('steps', function (Blueprint $table) {
             $table->increments('id');
-            $table->enum('type',['Atendimento', 'Medição de Projeto', 'Apresentação do Projeto',
+            $table->enum('type',['Atendimento', 'Mediação de Projetos', 'Apresentação do Projeto',
                 'Fechamento', 'Financeiro', 'Agendamento de conferência do projeto',
                 'Pasta Técnica', 'Envio para a Fábrica', 'Produção', 'Logística',
                 'Montagem', 'Pós Venda']);
